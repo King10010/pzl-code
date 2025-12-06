@@ -2,9 +2,15 @@
 import pytest
 from calculator import add, sub, mul, div
 
-def test_add():
-    assert add(1, 2) == 3
+# def test_add():
+#     assert add(1, 2) == 3
+def test_add_numeric_string():
+    assert add("1", "2") == 3.0
 
+def test_add_invalid_input():
+    import pytest
+    with pytest.raises(ValueError):
+        add("abc", 1)
 def test_sub():
     assert sub(5, 3) == 2
 

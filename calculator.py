@@ -1,7 +1,12 @@
 # calculator.py
 
+# def add(a, b):
+#     return a + b
 def add(a, b):
-    return a + b
+    try:
+        return float(a) + float(b)
+    except Exception:
+        raise ValueError("add() only accepts numbers or numeric strings")
 
 def sub(a, b):
     return a - b
